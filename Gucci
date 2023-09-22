@@ -1,0 +1,56 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "BaconBoss Hub | Gucci Ancora Fashion Show", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+getgenv().tpPlace = "string"
+
+function Teleport(teleportPlace)
+    local player = game.Players.LocalPlayer
+    player.Character.HumanoidRootPart.CFrame = teleportPlace
+end
+
+local TpTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+TpTab:AddButton({
+	Name = "Place To Put Gem",
+	Callback = function()
+        Teleport(game:GetService("Workspace").DEV_PAINTING_ASSETS.Frames.GemPuzzle.Chest.Top.CFrame)
+    end
+}) 
+
+TpTab:AddButton({
+	Name = "Place To Get UGC",
+	Callback = function()
+        Teleport(game:GetService("Workspace")["Meshes/ArtGallery_WallsTest_ArtGallery_DisplayPlatform01 (2)"].CFrame)
+    end
+}) 
+
+TpTab:AddButton({
+	Name = "Gem 1",
+	Callback = function()
+        Teleport(game:GetService("Workspace").DEV_PAINTING_ASSETS.Frames.GemPuzzle.Gems.EasyGem.Gem01.CFrame)
+    end
+}) 
+
+TpTab:AddLabel("Note: Jump For Gem")
+
+TpTab:AddButton({
+	Name = "Gem 2",
+	Callback = function()
+        Teleport(game:GetService("Workspace").DEV_PAINTING_ASSETS.Frames.GemPuzzle.Gems.StatueGem.Gem01.CFrame)
+    end
+}) 
+
+TpTab:AddButton({
+	Name = "Gem 3",
+	Callback = function()
+        Teleport(game:GetService("Workspace").DEV_PAINTING_ASSETS.Frames.GemPuzzle.Gems.ShowRoomGem.Gem01.CFrame)
+    end
+}) 
+
+TpTab:AddLabel("Note: For The Last Gem You Must Follow My Step In Video")
+
+
